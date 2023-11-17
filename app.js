@@ -17,3 +17,18 @@ function addTask(){
     }
     inputBox.value = "";
 }
+
+// checked/unchecked, remove task
+listContainer.addEventListener("click", function(e){
+    if(e.target.tagName  === "LI"){
+        // e.target.classList.add('ckecked');
+        e.target.classList.toggle('checked');  
+        
+        let data = e.target.classList;
+        console.log(data);
+    }
+    else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+       
+    }
+}, false);;
