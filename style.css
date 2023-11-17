@@ -52,7 +52,7 @@
     background: transparent;
  }
 
- .row .addBtn{
+ .row #addBtn{
     padding: 20px;
     border: none;
     outline: none;
@@ -95,3 +95,5 @@
  ul li.checked::before{
     background-image: url('img/checked.png');
  }
+
+ 
