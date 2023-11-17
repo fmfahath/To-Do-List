@@ -26,9 +26,42 @@
     align-items: center;
     gap: 10px;
     color: #002765;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
  }
 
  .to-do-list h2 img{
     width: 30px;
+ }
+
+ .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+ }
+
+ .row input{
+    flex: 1;
+    /* color: #555; */
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 16px;
+    background: transparent;
+ }
+
+ .row .addBtn{
+    background: #7b089b;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 20px 50px;
+    color: #ffff;
+    background: #ff5945;
+    font-size: 16px;
+    cursor: pointer;
  }
