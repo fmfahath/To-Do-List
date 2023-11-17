@@ -16,19 +16,32 @@ function addTask(){
         li.appendChild(span);
     }
     inputBox.value = "";
+
+    saveData()
 }
 
 // checked/unchecked, remove task
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName  === "LI"){
-        // e.target.classList.add('ckecked');
         e.target.classList.toggle('checked');  
         
-        let data = e.target.classList;
-        console.log(data);
+        saveData();
+        // let data = e.target.classList;
+        // console.log(data);
     }
     else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
        
+        saveData();
     }
 }, false);;
+
+// store task list data
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+
+showTask();
